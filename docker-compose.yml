@@ -65,6 +65,14 @@ services:
       - ./src:/var/www/html
     working_dir: /var/www/html
     entrypoint: ['npm']
+  
+  yarn:
+    image: node:13.7
+    container_name: yarn
+    volumes:
+      - ./src:/var/www/html
+    working_dir: /var/www/html
+    entrypoint: ['yarn']
 
   artisan:
     build:
